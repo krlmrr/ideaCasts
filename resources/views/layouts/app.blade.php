@@ -13,11 +13,13 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans bg-gray-50 text-gray-900 text-sm">
+
+    <body class="font-sans bg-gray-100 text-gray-900 text-sm">
         <header class="flex items-center justify-between px-8 py-4">
             <a href='{{ route('index') }}' class="text-xl">
                 IdeaCasts
             </a>
+
             <div class="flex items-center">
                 @if (Route::has('login'))
                     <div class="top-0 right-0 px-6 py-4">
@@ -36,13 +38,16 @@
                             </a>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">
+                                <a href="{{ route('register') }}"
+                                   class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline"
+                                >
                                     Register
                                 </a>
                             @endif
                         @endauth
                     </div>
                 @endif
+
                 <a href="{{ route('index') }}">
                     <img src="https://www.gravatar.com/avatar/0000000000000000?d=mp"
                         alt="avatar"
@@ -51,12 +56,44 @@
                 </a>
             </div>
         </header>
+
         <main class="container mx-auto flex my-4">
-            <div class="mx-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad architecto culpa delectus ducimus, eaque error harum molestias nobis numquam odit perspiciatis quae quibusdam quo, voluptas. Ab alias aut commodi consequuntur culpa cupiditate, deserunt dicta distinctio dolore doloribus ducimus ea eaque est facere hic id itaque libero magnam magni molestiae nisi obcaecati quam repellat sequi tempora tenetur, veritatis voluptatem. A adipisci, animi, aspernatur assumenda autem cupiditate doloremque ducimus, eveniet fugiat illo iure nemo nobis officiis praesentium recusandae reprehenderit suscipit vel velit voluptate voluptatibus? Alias atque exercitationem fugit ipsum itaque laudantium natus quasi ratione reiciendis sed? A exercitationem fuga inventore voluptatibus.
+            <div class="mx-2 w-1/5">
+                Add Idea Form
             </div>
-            <div class="mx-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolores ipsa molestiae reiciendis, rem vitae. Deleniti doloribus officia temporibus veritatis voluptatem? Culpa deleniti earum eveniet incidunt iure maiores minus porro! Aperiam error et eveniet mollitia necessitatibus nemo quasi sint, voluptate. Ad alias at ea laudantium maiores modi nesciunt odit officiis omnis provident repellat, reprehenderit sunt! Aliquid aut beatae deserunt facere, facilis iure neque nisi, non nostrum, nulla obcaecati omnis possimus quae quibusdam recusandae vitae voluptas. Architecto autem corporis cumque debitis ducimus earum eius est et facere ipsum iure iusto laudantium libero maxime nam nihil nobis numquam odit officiis pariatur, quo ratione rem sapiente similique sint? Aperiam beatae corporis dolorem doloremque doloribus dolorum eius eveniet harum hic, in, iusto laudantium neque nostrum numquam perspiciatis placeat porro provident quae quaerat quis repellendus saepe, sed suscipit tempora tenetur velit voluptas. Ea facere incidunt ipsa magni molestias odio quos sed veniam, voluptatum? Accusamus accusantium cupiditate labore molestias mollitia quos sapiente suscipit. Aliquid asperiores at autem beatae commodi consequuntur cum debitis deserunt doloribus ducimus ea eius exercitationem explicabo fugiat id ipsa iure iusto laboriosam magnam maiores mollitia natus nemo nisi non, odio odit officia quas quis quo repellendus sequi suscipit temporibus tenetur? Deserunt, id, voluptas.
+
+            <div class="mx-2 w-4/5">
+                <nav class="flex items-center justify-between">
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li>
+                            <a href="#" class="border-b-4 pb-3 border-blue-400">
+                                All Ideas (87)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-400">
+                                Considering (6)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-400">
+                                In Progress (1)
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="flex uppercase font-semibold space-x-10">
+                        <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-400">
+                            Implemented (10)
+                        </a>
+                        <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-400">
+                            Closed (55)
+                        </a>
+                    </ul>
+                </nav>
+
+                <div class="mt-8">
+                    {{ $slot }}
+                </div>
             </div>
         </main>
     </body>
