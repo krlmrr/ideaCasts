@@ -64,7 +64,7 @@
 
             <div class="mx-2 w-4/5">
                 <nav class="flex items-center justify-between">
-                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                    <ul class="flex uppercase font-semibold space-x-10">
                         <li>
                             <a href="#" class="border-b-4 pb-3 border-blue-400">
                                 All Ideas (87)
@@ -81,6 +81,7 @@
                             </a>
                         </li>
                     </ul>
+
                     <ul class="flex uppercase font-semibold space-x-10">
                         <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-400">
                             Implemented (10)
