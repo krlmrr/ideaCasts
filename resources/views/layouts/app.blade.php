@@ -59,7 +59,72 @@
 
         <main class="container mx-auto flex my-4">
             <div class="mx-2 w-1/5">
-                Add Idea Form
+                <div class="border-2 border-blue-300 rounded-xl mt-16 bg-white">
+                    <div class="text-center px-6 py-2 pt-6">
+                        <h3 class="font-semibold text-base">
+                            Add an Idea
+                        </h3>
+                        <p class="text-xs mt-4">
+                            Let us know what you would like, and we'll take a look!
+                        </p>
+                    </div>
+                    <form action="" method="POST" class="space-y-4 px-4 py-6">
+                        <input
+                            type="text"
+                            placeholder="Your idea"
+                            class="w-full bg-gray-100 text-sm border-none rounded-xl placeholder:text-gray-900 px-4 py-2"
+                        >
+
+                        <select name="category_add" id="category_add" class="w-full text-sm bg-gray-100 rounded-xl border-none px-4 py-2">
+                            <option value="Category One">
+                                Category One
+                            </option>
+                            <option value="Category Two">
+                                Category Two
+                            </option>
+                            <option value="Category Three">
+                                Category Three
+                            </option>
+                            <option value="Category Four">
+                                Category Four
+                            </option>
+                            <option value="Category Five">
+                                Category Five
+                            </option>
+                        </select>
+
+                        <textarea
+                            name="idea"
+                            id="idea"
+                            cols="30"
+                            rows="4"
+                            placeholder="Describe your idea."
+                            class="w-full bg-gray-100 rounded-xl placeholder:text-gray-900 border-none text-sm px-4 py-2"
+                        ></textarea>
+
+                        <div class="flex items-center justify-between space-x-3">
+                            <button
+                                type="button"
+                                class="flex items-center justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in"
+                            >
+                                <svg class="w-4 text-gray-600 -rotate-45" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
+                                </svg>
+
+                                <span class="ml-1">
+                                    Attach
+                                </span>
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="flex items-center justify-center w-1/2 h-11 text-xs bg-blue-400 text-white font-semibold rounded-xl border border-gray-200 hover:border-blue-700 transition duration-150 ease-in"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
             <div class="mx-2 w-4/5">
